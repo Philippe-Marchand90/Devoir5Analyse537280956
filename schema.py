@@ -3,7 +3,7 @@ import euler_explicite as euler_explicite
 
 def schema(sigma, L, f, h, tau, K):
 
-    n = int(round(L/H))
+    n = int(round(L/h))
     x_int = np.linspace(h, L-h, n-1)
 
     U0 = f(x_int)
