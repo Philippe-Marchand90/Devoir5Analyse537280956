@@ -2,13 +2,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 from schema import schema
 
-
-def fonc():
-
+def main():
     sigma = 1.0
-    L = 1.0
-    h = 1/10
-    f = lambda x: np.sin(np.pi * x)
+    L     = 1.0
+    h     = 1/10
+    f     = lambda x: np.sin(np.pi * x)
+
     for tau in [0.001, 0.01]:
         K = int(1.0 / tau)
         W = schema(sigma, L, f, h, tau, K)
@@ -45,5 +44,5 @@ def fonc():
 
     plt.show()
 
-if __name__ == "__fonc__":
-    fonc()
+if __name__ == "__main__":
+    main()
